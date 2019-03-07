@@ -1,0 +1,8 @@
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+export const ADD_FRIENDS = 'ADD_FRIENDS';
+export const ADD_FRIENDS_FAILURE = 'ADD_FRIENDS_FAILURE';
+export const ADD_FRIEND = 'ADD_FRIEND';
+export const DELETE_FRIEND = 'DELETE_FRIEND';
+export const SPINNER_ON = 'SPINNER_ON';
+export const SPINNER_OFF = 'SPINNER_OFF';
