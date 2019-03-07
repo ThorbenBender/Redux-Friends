@@ -10,6 +10,7 @@ export class LoginForm extends React.Component {
                 <input type="text" />
                 <input type="password" />
                 <button type="submit" onClick={this.props.login}>Log in</button>
+                <button onClick={() => localStorage.clear()}>Log out</button>
             </div>
         )
     }

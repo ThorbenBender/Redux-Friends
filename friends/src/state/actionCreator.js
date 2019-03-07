@@ -1,5 +1,5 @@
 import * as types from './actionTypes';
-import axios from 'axios';
+import axios from '../axios/axios';
 
 export const login = user => dispatch => {
     dispatch(spinnerOn);
@@ -17,9 +17,9 @@ export const login = user => dispatch => {
 
 export const friends = () => dispatch =>  {
     dispatch(spinnerOn);
-    const token = localStorage.getItem('userToken');
-    fetch('http://localhost:5000/api/friends')
+    axios().get('http://localhost:5000/api/friends')
         .then(res => {
+            console.log(res, '<== should be the res');
             dispatch({ type: types.ADD_FRIENDS, payload: res.data });
             dispatch(spinnerOff);
         })
@@ -44,4 +44,3 @@ export function spinnerOff() {
         type: types.SPINNER_OFF,
     };
 }
-

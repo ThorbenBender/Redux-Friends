@@ -20,7 +20,7 @@ const customMiddlewareToSaveUserToken = store => next => action => {
 
 const rootReducer = combineReducers({
     getFriends,
-    spinner
+    spinner,
 })
 
 const store = createStore(
